@@ -34,7 +34,7 @@ artskonto|String| _**827**_
 kapittelPost|String| _**372030**_
 utleveringsdato|Date| datotid fra ODB_ENKELTREGNING, omgjort til den første i måneden
 artikkelnummer|String| **_FBV_**
-antallEnheter|Number| **_1_**
+antallEnheter|Number| **_100_**
 tekstlinje|Array:Tekstlinje| 
      
 ### Tekstlinje 
