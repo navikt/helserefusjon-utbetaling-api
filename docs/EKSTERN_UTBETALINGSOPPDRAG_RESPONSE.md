@@ -5,7 +5,7 @@
 Felt | Type | Beskrivelse / Verdi
 -----|------ |------------
 mer | Boolean | true om det finnes flere oppdrag å hente 
-utbetalingsOppdrag | Array | Liste med UtbetalingsOppdrag
+utbetalingsOppdrag | Array | Liste med UtbetalingsOppdrag, se [UtbetalingsOppdrag](UTBETALINGSOPPDRAG.md)
 
 
 ## Eksempel
