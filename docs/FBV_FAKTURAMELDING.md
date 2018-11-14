@@ -8,7 +8,7 @@ Felt | Type | Beskrivelse / Verdi
 offisiellId |String | Helseforetak orgnr. fra ODB_HELSEFORETAK 
 systemId | Number | _**15**_ = KUHR
 forsystemRef|String| faktura_id fra ODB_FAKTURA
-oppdragstype|String| **_ordre_**
+oppdragstype|String| **_ORDRE_**
 tjenesteType|String| _**ny**_
 mottakergruppe|String| **_Virksomhet_**
 valutasort|String| **_NOK_**
@@ -31,7 +31,7 @@ Felt | Type | Beskrivelse
 linjenummer|Number|
 belop|Number| Sum av beløpet på takstene for regningen, unntatt takst 201b
 artskonto|String| _**827**_
-kapittelPost|String| _**372030**_
+kapittelPost|String| _**074072**_
 utleveringsdato|Date| datotid fra ODB_ENKELTREGNING, omgjort til den første i måneden
 artikkelnummer|String| **_FBV_**
 antallEnheter|Number| **_100_**
