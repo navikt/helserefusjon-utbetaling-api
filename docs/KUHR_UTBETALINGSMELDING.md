@@ -5,6 +5,7 @@
 ### Utbetaling
 Felt | Type | Beskrivelse / Verdi
 -----|------ |------------
+meldingId | String | GUID for hver melding, brukes for å oppdage duplikater og spore en melding gjennom en kjede av systemer.
 offisiellId |String | behandler_identifikasjon fra ODB_VEDTAK 
 praksisId | String | samh_praksis_id fra SAR
 systemId | Number | _**15**_ = KUHR
