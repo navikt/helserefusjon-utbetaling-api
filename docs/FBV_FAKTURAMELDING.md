@@ -5,6 +5,7 @@
 ### Faktura
 Felt | Type | Beskrivelse / Verdi
 -----|------ |------------
+meldingId | GUID for hver melding, brukes for å oppdage duplikater og spore en melding gjennom en kjede av systemer.
 offisiellId |String | Helseforetak orgnr. fra ODB_HELSEFORETAK 
 systemId | Number | _**15**_ = KUHR
 forsystemRef|String| faktura_id fra ODB_FAKTURA
