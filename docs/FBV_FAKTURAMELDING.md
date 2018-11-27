@@ -12,7 +12,7 @@ oppdragstype|String| **_ORDRE_**
 tjenesteType|String| _**ny**_
 mottakergruppe|String| **_Virksomhet_**
 valutasort|String| **_NOK_**
-egenReferanse|String| referanse fra ODB_FAKTURA
+egenReferanse|String| faktura_id fra ODB_FAKTURA
 fakturaType|String| **_Fritt behandlingsvalg_**
 meldingFaktura|String| **_Refusjon for oppgjør til behandlingsvalgleverandør (FBV). Periode <dato fra>-<dato og år til>._**
 ordreType|String| **_FF_**
