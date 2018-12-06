@@ -8,7 +8,7 @@ utbetalingsKvitteringId | Number | id på UtbetalingsKvittering, opprettes av he
 utbetalingsOppdragId | Number | id på UtbetalingsOppdrag kvittering gjelder for 
 forsystemRef| String | forsystems referanse/id
 systemId | Number | id på forsystem
-oppdragstype| String| UTBETALING, ORDRE eller AVSTEMMING
+oppdragstype| String| _**UTBETALING**_, _**ENDRET_UTBETALING**_, _**ORDRE**_ eller _**AVSTEMMING**_
 betalingId | Number |
 bilagId | Number | 
 ordrenummer | Number |
