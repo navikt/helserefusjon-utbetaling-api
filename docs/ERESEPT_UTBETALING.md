@@ -36,7 +36,7 @@ belop | Number | UtbetaltBelop fra UTBETALING
 
 ## Eksempel
 
-```
+```json
 {
 	"forsystemRef": "U510000000016844",
 	"meldingId": "c61c646b-f87d-11e8-a217-ffa20916eaa5",
@@ -58,14 +58,12 @@ belop | Number | UtbetaltBelop fra UTBETALING
 			"linjenr": 1,
 			"artskonto": "872",
 			"kapPost": "275170",
-			"belop": 48.80,
-			"koststed": "2340"
+			"belop": 48.80
 		}, {
 			"linjenr": 0,
 			"artskonto": "872",
 			"kapPost": "275270",
-			"belop": 31.20,
-			"koststed": "2340"
+			"belop": 31.20
 		}
 	]
 }
