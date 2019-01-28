@@ -9,7 +9,7 @@ meldingId | String | GUID for hver melding, brukes for å oppdage duplikater og s
 offisiellId |String | HPR-nummeret hvis samhandleren har ett, ellers behandler_identifikasjon fra ODB_VEDTAK 
 praksisId | String | samh_praksis_id fra SAR
 systemId | Number | _**15**_ = KUHR
-forsystemRef|String| vedtak_id fra ODB_VEDTAK
+forsystemRef|String| _**U**_ / _**MU**_ + vedtak_id fra ODB_VEDTAK / ODB_MAN_REG_VEDTAK
 oppdragstype|String| **_utbetaling_**
 tjenesteType|String| _**ny**_ _**endret**_ _**stoppet**_
 mottakergruppe|String| **_Behandler_** **_Virksomhet_**
