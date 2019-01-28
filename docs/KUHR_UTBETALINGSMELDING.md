@@ -45,36 +45,64 @@ koststed | String  | **_2340_**
 
 ```json
 {
-  "meldingId": "17406bf7-5e7e-42ea-8b11-dce99aa88f71",
+  "meldingId": "11aac730-ca0f-4ca6-b54b-08c98ba93d5d",
   "systemId": 15,
   "mottakergruppe": "Virksomhet",
-  "forsystemRef": "U100001775179825",
-  "offisiellId": "964966109",
-  "praksisId": "1001428150",
-  "navn": "Evje Og Hornnes Kommune",
+  "forsystemRef": "U100001775600523",
+  "offisiellId": "964963738",
+  "praksisId": "1000042996",
+  "navn": "Seljord Kommune",
   "postnr": "0000",
   "landkode": "NO",
-  "kontonummer": "17301883730",
-  "eksternReferanse": "Fastlønnet",
+  "kontonummer": "27110710777",
+  "eksternReferanse": "Seljord helsesenter",
   "oppdragstype": "UTBETALING",
   "tjenesteType": "ny",
   "bilagsart": "TR",
   "valutasort": "NOK",
-  "belop": 63.0,
-  "forfallsdato": "2019-01-22",
+  "belop": 1298.0,
+  "forfallsdato": "2019-01-25",
   "melding": "Fastlønnet refusjon fra Helfo",
   "konteringer": [
     {
-      "linjenummer": 1,
-      "belop": 63.0,
+      "linjenr": 1,
+      "belop": 38.0,
+      "artskonto": "870",
+      "kapPost": "275171",
+      "koststed": "2340",
+      "fraDato": "2019-01-01",
+      "tilDato": "2019-01-31"
+    },
+    {
+      "linjenr": 2,
+      "belop": 116.0,
+      "artskonto": "870",
+      "kapPost": "275171",
+      "koststed": "2340",
+      "fraDato": "2018-12-01",
+      "tilDato": "2018-12-31"
+    },
+    {
+      "linjenr": 3,
+      "belop": 833.0,
       "artskonto": "870",
       "kapPost": "275570",
       "koststed": "2340",
       "fraDato": "2019-01-01",
       "tilDato": "2019-01-31"
+    },
+    {
+      "linjenr": 4,
+      "belop": 311.0,
+      "artskonto": "870",
+      "kapPost": "275570",
+      "koststed": "2340",
+      "fraDato": "2018-12-01",
+      "tilDato": "2018-12-31"
     }
   ]
 }
+
 
 ```
 
