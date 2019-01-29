@@ -22,28 +22,20 @@ Felt | Type | Beskrivelse / Verdi
 -----|------ |-------------------
 meldingId | String | GUID for hver melding
 offisiellId |String | borgerident
-~~praksisId~~ | ~~String~~ | ~~ikke i bruk for Frikort~~
+praksisId | String | borgerid (unikt nummer for borger)
 systemId | Number | _**16**_
-forsystemRef|String| _**FRIKU **_ + utbetalingsid fra Frikort-utbetaling. _Er det ok?_
+forsystemRef|String| _**FRIKU **_ + utbetalingsid fra Frikort-utbetaling. _Denne må ikke være lenger enn maks 25 tegn_
 oppdragstype|String| _**UTBETALING**_
 tjenesteType|String| _**NY**_
 mottakergruppe|String| _**PRIVATPERSON**_
 valutasort|String| **_NOK_**
 navn | String | navn på borger (fra Frikort-borger)
-~~adresse~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
 postnr | ~~String~~| _**0000**_
-~~poststed~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
 landkode | String | _**NO**_
 kontonummer | String | gironummer (fra Frikort-borger)
-~~BBAN~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
-~~IBAN~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
-~~BIC~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
-~~betalingsartkode~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
 bilagsart | String | _**TR**_
-forfallsdato | Date| Dagens dato 
+forfallsdato | Date| Dagens dato + 1 dag. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Sum beløp på alle utbetalingslinjene
-~~kidnummer~~ | String | ~~ikke i bruker for Frikort~~
-~~eksternReferanse~~ | ~~String~~ | ~~ikke i bruker for Frikort~~
 melding | String | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
 konteringer | Array:Konteringslinje |
 
@@ -51,12 +43,9 @@ konteringer | Array:Konteringslinje |
 Felt | Type | Beskrivelse / Verdi
 -----|----- |--------------------
 linjenr | Number | Starter på 0
-artskonto | String | _*874*_ Forstår det slik at denne skal være 874?
-kapPost | String | _???_  Hva skal denne være?
+artskonto | String | _*874*_
+kapPost | String | _???_  Todo: Vi må undersøke litt mer her.
 belop | Number | beløp fra utbetalingslinje
-~~koststed~~ | ~~String~~ | ~~_**2340??**_ Skal denne fylles inn av Frikort?~~
-~~fradato~~ | ~~Date~~ | Antar at denne ikke skal fylles inn for Frikort?
-~~tildato~~ | ~~Date~~ | Antar at denne ikke skal fylles inn?
  
 
 
