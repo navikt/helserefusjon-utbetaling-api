@@ -1,4 +1,6 @@
 # FRIKORT Utbetaling
+Utbetalingsmelding fra Frikort for nye utbetalinger.
+Pt. gjelder denne meldingsbeskrivelse kun for utbetaling til norske kontoer.
 
 ## Ressurser
 _**(Hardkodede konstanter er markert med bold-kursiv)**_
@@ -17,33 +19,40 @@ Felt | Type | Beskrivelse / Verdi
 meldingId | String | GUID for hver melding
 offisiellId |String | borgerident
 ~~praksisId~~ | ~~String~~ | ~~ikke i bruk for Frikort~~
-systemId | Number | _**16**_ = FRIKORT
-forsystemRef|String| _**FRIKU? **_ + utbetalingsid fra UTBETALING. Skal alltid være FRIK etterfulgt av en bokstav: U (Ubetaling), E (Endre), A (Annulering), S (Stopp).
-oppdragstype|String| _**UTBETALING**_ (hentet fra eResept)
-tjenesteType|String| _**NY**_ (hentet fra eResept)
-mottakergruppe|String| _**PRIVATPERSON**_ (hentet fra dok)
-valutasort|String| **_NOK_** (hentet fra eResept). Hvordan håndtere andre valutaer?
-navn | String | navn fra Borger (i dok står det "navn på leverandør"?)
-postnr | String| _avklar_ (fra eresept: _**0000**_). Hvordan håndtere utland?
-landkode | String | _avklar_ (fra eresept: _**NO**_). Hvordan håndtere utland (hvilket kodeverk brukes for landkoder ISO 3166-1 alpha-2)?
-kontonummer | String | gironummer fra Borger (_hva med utland)_
-bilagsart | String | _**TR**_ (hentet fra eResept og dok)
+systemId | Number | _**16**_
+forsystemRef|String| _**FRIKU **_ + utbetalingsid fra UTBETALING. _Er det ok?_
+oppdragstype|String| _**UTBETALING**_
+tjenesteType|String| _**NY**_
+mottakergruppe|String| _**PRIVATPERSON**_
+valutasort|String| **_NOK_**
+navn | String | navn på borger (fra BORGER)
+~~adresse~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+postnr | ~~String~~| _**0000**_
+~~poststed~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+landkode | String | _**NO**_
+kontonummer | String | gironummer (fra BORGER)
+~~BBAN~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+~~IBAN~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+~~BIC~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+~~betalingsartkode~~ | ~~String~~ | ~~ikke i bruk for Frikort ved utbetalinger til norsk konto~~
+bilagsart | String | _**TR**_
 forfallsdato | Date| Dagens dato 
 belop | Number | Sum beløp på alle utbetalingslinjene
-~~kidnummer~~ | String | ~~kid fra SAR~~ _Utgår_
-melding | String | "Refusjon egenandel(er) frikort 2018" Velg år dynamisk.
+~~kidnummer~~ | String | ~~ikke i bruker for Frikort~~
+~~eksternReferanse~~ | ~~String~~ | ~~ikke i bruker for Frikort~~
+melding | String | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
 konteringer | Array:Konteringslinje |
 
 ### Konteringslinje
 Felt | Type | Beskrivelse / Verdi
 -----|----- |--------------------
 linjenr | Number | Starter på 0
-artskonto | String | _874_ (en fast verdi?) (Hentet fra dok)
-kapPost | String | _???_ 
-belop | Number | beløp fra utbetaling
-koststed | String | _**2340**_ (avklar om denne skal fylles inn)
-fradato | Date | Antar at denne ikke skal fylles inn?
-tildato | Date | Antar at denne ikke skal fylles inn?
+artskonto | String | _*874*_ Forstår det slik at denne skal være 874?
+kapPost | String | _???_  Hva skal denne være?
+belop | Number | beløp fra utbetalingslinje
+koststed | String | _**2340??**_ Skal denne fylles inn av Frikort?
+~~fradato~~ | ~~Date~~ | Antar at denne ikke skal fylles inn for Frikort?
+~~tildato~~ | ~~Date~~ | Antar at denne ikke skal fylles inn?
  
 
 
@@ -53,32 +62,29 @@ tildato | Date | Antar at denne ikke skal fylles inn?
 {
 	"forsystemRef": "FRIKU510000000016844",
 	"meldingId": "c61c646b-f87d-11e8-a217-ffa20916eaa5",
-	"systemId": 14,
-	"offisiellId": "973151401",
+	"systemId": 16,
+	"offisiellId": "12345612345",
 	"oppdragstype": "UTBETALING",
 	"belop": 80.00,
 	"valutasort": "NOK",
-	"mottakergruppe": "VIRKSOMHET",
+	"mottakergruppe": "PRIVATPERSON",
 	"tjenesteType": "NY",
-	"praksisId": "1000472046",
 	"kontonummer": "15031769342",
-	"navn": "Test 5.21 RC3",
+	"navn": "Finn Dott No",
 	"postnr": "0000",
 	"bilagsart": "TR",
-	"forfallsdato": "2018-12-04",
+	"forfallsdato": "2019-12-24",
 	"landkode": "NO",
 	"konteringer": [{
 			"linjenr": 1,
-			"artskonto": "872",
-			"kapPost": "275170",
+			"artskonto": "874",
+			"kapPost": "???",
 			"belop": 48.80,
-			"koststed": "2340"
 		}, {
 			"linjenr": 0,
-			"artskonto": "872",
-			"kapPost": "275270",
+			"artskonto": "874",
+			"kapPost": "???",
 			"belop": 31.20,
-			"koststed": "2340"
 		}
 	]
 }
