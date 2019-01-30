@@ -34,7 +34,7 @@ postnr | String| _**0000**_
 landkode | String | _**NO**_
 kontonummer | String | gironummer (fra Frikort-borger)
 bilagsart | String | _**TR**_
-forfallsdato | Date| Dagens dato + 1 dag. _Todo: Avklare omkring neste virkedag._ 
+forfallsdato | Date| Dagens dato + 1 dag. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Sum beløp på alle utbetalingslinjene
 melding | String | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
 konteringer | Array:Konteringslinje |
