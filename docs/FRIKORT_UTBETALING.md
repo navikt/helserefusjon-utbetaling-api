@@ -20,7 +20,7 @@ Hver utbetalingslinje holdes igjen i Frikort for å samle opp slik at man ikke l
 ### Utbetaling
 Felt | Type | Beskrivelse / Verdi
 -----|------ |-------------------
-meldingId | String | GUID for hver melding
+meldingId | String | GUID for hver melding. meldingId i [UTBETALINGSOPPDRAG](docs/UTBETALINGSOPPDRAG.md) skal settes til denne verdien Helseutbetaling.
 offisiellId |String | borgerident
 praksisId | String | borgerid (unikt nummer for borger)
 systemId | Number | _**16**_
@@ -30,7 +30,7 @@ tjenesteType|String| _**NY**_
 mottakergruppe|String| _**PRIVATPERSON**_
 valutasort|String| **_NOK_**
 navn | String | navn på borger (fra Frikort-borger)
-postnr | ~~String~~| _**0000**_
+postnr | String| _**0000**_
 landkode | String | _**NO**_
 kontonummer | String | gironummer (fra Frikort-borger)
 bilagsart | String | _**TR**_
@@ -43,8 +43,8 @@ konteringer | Array:Konteringslinje |
 Felt | Type | Beskrivelse / Verdi
 -----|----- |--------------------
 linjenr | Number | Starter på 0
-artskonto | String | _*874*_
-kapPost | String | _???_  Todo: Vi må undersøke litt mer her.
+artskonto | String | _*874*_ 
+kapPost | String | _*275270*_ for tak 1. _*275271*_ for tak 2. **Todo** Det kan være at det skal være andre verdier også, dette skal avklares.
 belop | Number | beløp fra utbetalingslinje
  
 
