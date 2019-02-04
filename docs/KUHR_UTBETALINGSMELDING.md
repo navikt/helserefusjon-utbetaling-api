@@ -31,7 +31,7 @@ Hentes fra tabellene odb_vedtak_utbetalt_dfoe og odb_man_reg_vedtak_utbet_dfoe.
 
 Felt | Type | Beskrivelse / Verdi
 -----|------ |------------
-linjenr |Number | Starter på 1
+linjenr |Number | Starter på 0
 belop | Number | 
 fraDato | Date |
 tilDato | Date |
@@ -65,7 +65,7 @@ koststed | String  | **_2340_**
   "melding": "Fastlønnet refusjon fra Helfo",
   "konteringer": [
     {
-      "linjenr": 1,
+      "linjenr": 0,
       "belop": 38.0,
       "artskonto": "870",
       "kapPost": "275171",
@@ -74,7 +74,7 @@ koststed | String  | **_2340_**
       "tilDato": "2019-01-31"
     },
     {
-      "linjenr": 2,
+      "linjenr": 1,
       "belop": 116.0,
       "artskonto": "870",
       "kapPost": "275171",
@@ -83,7 +83,7 @@ koststed | String  | **_2340_**
       "tilDato": "2018-12-31"
     },
     {
-      "linjenr": 3,
+      "linjenr": 2,
       "belop": 833.0,
       "artskonto": "870",
       "kapPost": "275570",
@@ -92,7 +92,7 @@ koststed | String  | **_2340_**
       "tilDato": "2019-01-31"
     },
     {
-      "linjenr": 4,
+      "linjenr": 3,
       "belop": 311.0,
       "artskonto": "870",
       "kapPost": "275570",
