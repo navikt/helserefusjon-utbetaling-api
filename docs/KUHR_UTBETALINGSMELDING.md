@@ -10,8 +10,8 @@ offisiellId |String | HPR-nummeret hvis samhandleren har ett, ellers behandler_i
 praksisId | String | samh_praksis_id fra SAR
 systemId | Number | _**15**_ = KUHR
 forsystemRef|String| _**U**_ / _**MU**_ + vedtak_id fra ODB_VEDTAK / ODB_MAN_REG_VEDTAK
-oppdragstype|String| **_utbetaling_**
-tjenesteType|String| _**ny**_ _**endret**_ _**stoppet**_
+oppdragstype|String| **_UTBETALING_**
+tjenesteType|String| _**ny**_ 
 mottakergruppe|String| **_Behandler_** **_Virksomhet_**
 valutasort|String| **_NOK_**
 navn | String | behandler_navn fra ODB_VEDTAK 
