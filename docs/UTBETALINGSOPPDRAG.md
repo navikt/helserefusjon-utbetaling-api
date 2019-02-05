@@ -12,8 +12,8 @@ oppdragstype| String | _**UTBETALING**_, _**ENDRET_UTBETALING**_, _**ORDRE**_ el
 belop | Number | beløp i i valutasort, 0 for _**AVSTEMMING**_
 valutasort| String | _**NOK**_, ikke satt for _**AVSTEMMING**_
 data | String | krypterte og signerte data, eller json som skal krypteres og signeres
-opprettetDato | Date | når ble oppdraget opprettet
-avstemtDato | Date | når ble oppdraget avstemt
+opprettetDato | Date | når ble oppdraget opprettet. Format er: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. 
+avstemtDato | Date | når ble oppdraget avstemt. Format er: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. 
 
 
 ## Eksempel
