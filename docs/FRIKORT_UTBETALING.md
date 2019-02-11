@@ -57,6 +57,7 @@ belop | Number | beløp fra utbetalingslinje
 	"meldingId": "c61c646b-f87d-11e8-a217-ffa20916eaa5",
 	"systemId": 16,
 	"offisiellId": "12345612345",
+	"praksisId": "9898",
 	"oppdragstype": "UTBETALING",
 	"belop": 80.00,
 	"valutasort": "NOK",
