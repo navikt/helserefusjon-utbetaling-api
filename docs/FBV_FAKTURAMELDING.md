@@ -14,6 +14,7 @@ tjenesteType|String| _**ny**_
 mottakergruppe|String| **_Virksomhet_**
 valutasort|String| **_NOK_**
 egenReferanse|String| faktura_id fra ODB_FAKTURA
+fakturaReferanse|String| deres_referanse fra ODB_HELSEFORETAK
 fakturaType|String| **_Fritt behandlingsvalg_**
 meldingFaktura|String| **_Refusjon for oppgjør til behandlingsvalgleverandør (FBV). Periode <dato fra>-<dato og år til>._**
 ordreType|String| **_FF_**
