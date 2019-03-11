@@ -183,7 +183,7 @@ For BBAN så settes følgende felter spesielt:
 _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinformasjon._
 
 
-## Eksempel IBAN utbetaling
+## Eksempel BBAN utbetaling
 
 ```
 {
