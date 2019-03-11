@@ -205,7 +205,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "bban": "USA123456789123",
   "banknavn": "Goldman Sachs",
   "bankAdresse": {
-    "landkode": "DE",
+    "landkode": "US",
     "adresselinje1": "200 West St",
     "adresselinje2": "NY 10282",
     "adresselinje3": "USA"
