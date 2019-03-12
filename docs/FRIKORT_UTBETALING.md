@@ -20,7 +20,7 @@ Hver utbetalingslinje holdes igjen i Frikort for å samle opp slik at man ikke l
 ### Utbetaling
 Felt | Type | Obligatorisk | Beskrivelse / Verdi
 -----|------|--------------| -------------------
-offisiellId |String | Ja | borgerident
+offisiellId |String | Ja | fødselsnummer
 systemId | Number | Ja | _**16**_
 forsystemRef|String| Ja | _**FRIKU **_ + utbetalingsid fra Frikort-utbetaling. _Denne må ikke være lenger enn maks 25 tegn_
 oppdragstype|String| Ja | _**UTBETALING**_
