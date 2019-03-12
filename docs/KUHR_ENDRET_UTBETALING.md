@@ -14,7 +14,9 @@ oppdragstype|String| _**ENDRET_UTBETALING**_
 tjenesteType|String| _**endret**_
 mottakergruppe|String| _**Virksomhet**_ eller _**Behandler**_
 kontonummer | String | konto fra SAR
-kidnummer | String | KID fra SAMH_PRAKSIS_KONTO, for samleregning brukes KID fra innsendingen hvis det finnes, ellers fra samh. 
+endretKontakt | Number | 0 eller 1 flagg for om kontakt/kontonummer er endret
+kidnummer | String | KID fra SAMH_PRAKSIS_KONTO, for samleregning brukes KID fra innsendingen hvis det finnes, ellers fra samh.
+endretKid | Number | 0 eller 1 flagg for om kidnummer er endret
 bilagId | Number | bilagId hentet fra kvittering fra DFØ
 
 ## Eksempel
@@ -29,7 +31,9 @@ bilagId | Number | bilagId hentet fra kvittering fra DFØ
   "offisiellId": "973850679",
   "praksisId": "1000404978",
   "kontonummer": "31230840205",
+  "endretKontakt": 0,
   "kidnummer": "05192861623148",
+  "endretKid": 1,
   "oppdragstype": "ENDRET_UTBETALING",
   "tjenesteType": "endret"
 }
