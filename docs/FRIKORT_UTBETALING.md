@@ -37,7 +37,7 @@ mottakerAdresse.adresselinje3 | String | Nei | Hentes fra TPS (uadresse3)
 kontonummer | String | Nei | Inneholder norsk bankkontonummer
 iban | String | Nei | For de landene som bruker IBAN
 bban | String | Nei | For de landene som bruker BBAN
-swift | String | Nei | Hvis mottaker ikke har et IBAN nkontonummer.
+swift | String | Nei | Hvis mottaker har et IBAN kontonummer skal denne fylles ut. Ved BBAN kan den fylles ut om man har denne informasjonen.
 bankkode | String | Nei | Bankcode/clearingcode som brukes for noen land
 banknavn | String | Nei | For de landene som bruker BBAN
 bankAdresse.landkode | String | Nei | Settes til _**NO**_ for norsk konto, ellers ISO-3166-1 alpha-2 for utenlandske konto.
@@ -47,7 +47,7 @@ bankAdresse.adresselinje3 | String | Nei | Hentes fra TPS (Adresse-linje3)
 bilagsart | String | Ja | _**TR**_
 forfallsdato | Date| Ja | Dagens dato + 1 dag. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Ja | Sum beløp på alle utbetalingslinjene
-betalingsartkode | String | Nei | _**???? Hva skal denne brukes til ????**_
+betalingsartkode | String | Nei | Skal fylles ut dersom beløp til utland er større enn 100.000 NOK. _**Hva skal denne være?**_
 melding | String | Ja | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
 konteringer | Array:Konteringslinje ||
 
@@ -146,7 +146,6 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "bilagsart": "TR",
   "forfallsdato": "2019-03-11T18:32:23.474+01:00",
   "belop": 40,
-  "betalingsartkode": "?????? <hva skal denne være > ?????",
   "konteringer": [
     {
       "linjeNr": 0,
@@ -165,7 +164,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
 ```
 
 ## Eksempel BBAN utbetaling
-Nedenfor er et eksempel på en ny utbetalingsmelding til en borger som har et BBAN nummer til en bank i Tyskland.
+Nedenfor er et eksempel på en ny utbetalingsmelding til en borger som har et BBAN nummer til en bank i USA.
 For BBAN så settes følgende felter spesielt:
 * bban
 * banknavn
@@ -204,6 +203,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   },
   "bban": "USA123456789123",
   "banknavn": "Goldman Sachs",
+  "swift": "SWCODE88",
   "bankAdresse": {
     "landkode": "US",
     "adresselinje1": "200 West St",
@@ -213,7 +213,6 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "bilagsart": "TR",
   "forfallsdato": "2019-03-11T18:42:35.98+01:00",
   "belop": 40,
-  "betalingsartkode": "?????? <hva skal denne være > ?????",
   "konteringer": [
     {
       "linjeNr": 0,
