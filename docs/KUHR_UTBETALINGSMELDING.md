@@ -15,7 +15,7 @@ tjenesteType|String| _**ny**_
 mottakergruppe|String| **_Behandler_** **_Virksomhet_**
 valutasort|String| **_NOK_**
 mottakerNavn | String | behandler_navn fra ODB_VEDTAK 
-utenlandsutbetaling | Number | 
+utenlandsbetaling | Number | 
 kontonummer | String | konto fra SAMH_PRAKSIS_KONTO
 bilagsart | String | **_TR_**
 forfallsdato | Date| Settes til dagens dato for å kunne utbetale "så fort som mulig" 
