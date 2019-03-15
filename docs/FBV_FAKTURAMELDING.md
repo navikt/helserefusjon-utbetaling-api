@@ -18,14 +18,20 @@ fakturaReferanse|String| deres_referanse fra ODB_HELSEFORETAK
 fakturaType|String| **_Fritt behandlingsvalg_**
 meldingFaktura|String| **_Refusjon for oppgjør til behandlingsvalgleverandør (FBV). Periode <dato fra>-<dato og år til>._**
 ordreType|String| **_FF_**
-navnKontakt|String| Helseforetak-navn fra ODB_HELSEFORETAK
-adresseKontakt|String| Helseforetak-adresse fra ODB_HELSEFORETAK
-postnrKontakt|String| Helseforetak-postnr fra ODB_HELSEFORETAK
-poststedKontakt|String| Helseforetak-poststed fra ODB_POSTSTED
-landkode|String| **_NO_**
+mottakerNavn|String| Helseforetak-navn fra ODB_HELSEFORETAK
+mottakerAdresse| Mottakeradresse |
 belop|Number| Sum av beløpet på takster som inngår i fakturaen, unntatt takst 201b 
 betalingsfrist|Number| _**20**_
 artikkellinjer|Array:Artikkellinje|
+
+### Mottakeradresse
+Felt | Type | Beskrivelse
+-----|------ |------------
+adresselinje1|String| Helseforetak-adresse fra ODB_HELSEFORETAK
+postnr|String| Helseforetak-postnr fra ODB_HELSEFORETAK
+poststed|String| Helseforetak-poststed fra ODB_POSTSTED
+landkode|String| **_NO_**
+
 
 ### Artikkellinje 
 Felt | Type | Beskrivelse
