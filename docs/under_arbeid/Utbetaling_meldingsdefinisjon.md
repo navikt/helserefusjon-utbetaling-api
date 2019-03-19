@@ -21,11 +21,11 @@ meldingId | String | Ja |
 ~~postnrKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 ~~poststedKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 mottakerNavn | String | Ja | Nytt felt, erstatter navnKontakt
-mottakeradresse | Array:Mottakeradresse | Nei | Ny struktur
-kontonummer | String | Ja | 
+mottakeradresse | Array:Adresse | Nei | Ny struktur
+kontonummer | String | Nei | Ikke lenger påkrevet
 utenlandsbetaling | Number | Ja | Nytt felt
 banknavn | String | Nei | Nytt felt
-bankadresse | Array:Bankadresse | Nei | Nytt felt
+bankadresse | Array:Adresse | Nei | Nytt felt
 iban | String | Nei | Nytt felt
 bban | String | Nei | Nytt felt
 swift | String | Nei | Nytt felt
@@ -37,7 +37,7 @@ belop | Number | Ja |
 kidnummer | String | Nei | 
 eksternReferanse | String| Nei |
 melding | String | Nei |
-konteringer | Array:Konteringslinje |
+konteringer | Array:Konteringslinje | Ja | 
 
 ### Konteringslinje
 Felt | Type | Påkrevet | Beskrivelse 
@@ -51,7 +51,7 @@ tilDato | Date | Nei |
 koststed | String | Nei | 
 
 
-### Mottakeradresse - Ny struktur
+### Adresse - Ny struktur
 Felt | Type | Påkrevet | Beskrivelse 
 -----|----- |----- |--------------------
 postnr | String | Nei | Ikke lenger påkrevet
@@ -60,14 +60,3 @@ landkode | String | Nei | Ikke lenger påkrevet
 adresselinje1 | String | Nei |
 adresselinje2 | String | Nei |
 adresselinje3 | String | Nei |
-
-### Bankadresse - Ny struktur
-Felt | Type | Påkrevet | Beskrivelse 
------|----- |----- |--------------------
-postnr | String | Nei | Nytt felt
-poststed | String | Nei | Nytt felt
-landkode | String | Nei | Nytt felt
-adresselinje1 | String | Nei | Nytt felt
-adresselinje2 | String | Nei | Nytt felt
-adresselinje3 | String | Nei | Nytt felt
-

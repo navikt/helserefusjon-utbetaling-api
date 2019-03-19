@@ -19,7 +19,7 @@ valutasort | String | Ja |
 ~~postnrKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 ~~poststedKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 mottakernavn | String | Ja | Nytt felt, erstatter navnKontakt
-mottakeradresse | Array:Mottakeradresse | Ja | Ny struktur
+mottakeradresse | Array:Adresse | Ja | Ny struktur
 ordreType | String | Ja | 
 meldingFaktura | String | Ja |
 fakturaType | String | Ja | 
@@ -47,7 +47,7 @@ Felt | Type | Påkrevet | Beskrivelse
 tekstlinjenummer | Number | Ja | 
 tekstlinjetekst | String | Ja | 
 
-### Mottakeradresse - Ny struktur
+### Adresse - Ny struktur
 Felt | Type | Påkrevet | Beskrivelse 
 -----|----- |----- |--------------------
 adresselinje1 | String | Ja |
