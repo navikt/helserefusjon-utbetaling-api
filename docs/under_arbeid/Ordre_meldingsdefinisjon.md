@@ -19,7 +19,7 @@ valutasort | String | Ja |
 ~~postnrKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 ~~poststedKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 mottakernavn | String | Ja | Nytt felt, erstatter navnKontakt
-mottakeradresse | Array:Adresse | Ja | Ny struktur
+mottakeradresse | Adresse | Ja | Ny struktur
 ordreType | String | Ja | 
 meldingFaktura | String | Ja |
 fakturaType | String | Ja | 

@@ -21,11 +21,11 @@ meldingId | String | Ja |
 ~~postnrKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 ~~poststedKontakt~~ | ~~String~~ | ~~Nei~~ | Utgått
 mottakerNavn | String | Ja | Nytt felt, erstatter navnKontakt
-mottakeradresse | Array:Adresse | Nei | Ny struktur
+mottakeradresse | Adresse | Nei | Ny struktur
 kontonummer | String | Nei | Ikke lenger påkrevet
 utenlandsbetaling | Number | Ja | Nytt felt
 banknavn | String | Nei | Nytt felt
-bankadresse | Array:Adresse | Nei | Nytt felt
+bankadresse | Adresse | Nei | Nytt felt
 iban | String | Nei | Nytt felt
 bban | String | Nei | Nytt felt
 swift | String | Nei | Nytt felt
