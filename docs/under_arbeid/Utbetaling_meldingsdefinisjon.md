@@ -30,7 +30,7 @@ iban | String | Nei | Nytt felt
 bban | String | Nei | Nytt felt
 swift | String | Nei | Nytt felt
 bankkode | String | Nei | Nytt felt
-betalingsartkode | String | Nei | Nytt felt
+~~betalingsartkode~~ | ~~String~~ | ~~Nei~~ | Utgår
 bilagsart | String | Ja | 
 forfallsdato | Date| Ja | 
 belop | Number | Ja | 
