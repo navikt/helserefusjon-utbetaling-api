@@ -1,4 +1,4 @@
-#Utbetaling-endret meldingsdefinisjon
+# Utbetaling-endret meldingsdefinisjon
 
 Felles meldingsdefinisjon for utbetaling-endret meldinger. Skal innholde alle feltene som kan komme fra eresept og kuhr.
 

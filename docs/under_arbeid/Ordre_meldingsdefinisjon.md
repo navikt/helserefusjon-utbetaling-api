@@ -1,4 +1,4 @@
-#Ordre meldingsdefinisjon
+# Ordre meldingsdefinisjon
 
 Felles meldingsdefinisjon for ubetbalingsmeldinger. Skal innholde alle feltene som kan komme fra eresept og kuhr.
 
