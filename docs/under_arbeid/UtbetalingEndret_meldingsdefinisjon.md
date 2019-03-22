@@ -8,12 +8,12 @@ Felt | Type | Påkrevet | Beskrivelse
 -----|------ |------ |-------------------
 meldingId | String | Ja | 
 offisiellId | String | Ja |
-praksisId | String | Nei | Ikke lenger påkrevet
+praksisId | String | Ja | (Frikort setter borgerId)
 systemId | Number | Ja | 
 forsystemRef| String | Ja | Skal denne være med?
 oppdragstype| String | Ja | _**UTBETALING**_
 tjenesteType| String | Ja | _**ENDRET**_
-mottakergruppe| String | Ja | Trenger vi denne?
+mottakergruppe| String | Ja | 
 kontonummer | String | Nei
 banknavn | String | Nei | Nytt felt
 bankadresse | Adresse | Nei | Nytt felt

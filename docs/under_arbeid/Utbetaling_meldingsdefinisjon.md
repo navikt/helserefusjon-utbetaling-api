@@ -8,7 +8,7 @@ Beskrivelse av hvordan meldingen brukes av hvert system ligger i egen katalog fo
 Felt | Type | Påkrevet | Beskrivelse 
 -----|------ |------ |-------------------
 offisiellId |String | Ja | 
-praksisId | String | Ja | 
+praksisId | String | Ja | (Frikort setter borgerId)
 systemId | Number | Ja| 
 forsystemRef|String| Ja | 
 oppdragstype|String| Ja | 
