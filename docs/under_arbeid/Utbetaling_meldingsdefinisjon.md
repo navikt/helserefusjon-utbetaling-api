@@ -37,6 +37,7 @@ belop | Number | Ja |
 kidnummer | String | Nei | 
 eksternReferanse | String| Nei |
 melding | String | Nei |
+trekkpliktig | Number | Nei | Nytt felt. Brukes av Kuhr
 konteringer | Array:Konteringslinje | Ja | 
 
 ### Konteringslinje
