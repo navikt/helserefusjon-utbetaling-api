@@ -13,6 +13,7 @@ forsystemRef|String| _**U**_ / _**MU**_ + vedtak_id fra ODB_VEDTAK / ODB_MAN_REG
 oppdragstype|String| **_UTBETALING_**
 tjenesteType|String| _**ny**_ 
 mottakergruppe|String| **_Behandler_** **_Virksomhet_**
+trekkpliktig|Number| Flagg 0 eller 1 for om samhandleren det kan gjøres trekk på utbetaling til samhandleren. Der praksistype er fastlege fastlønnet (FALO), turnuslege fastlønnet (FATU), eller legevakt kommunal (LEKO) skal det ikke kunne foretas trekk. Dette er utbetalinger hvor det er kommunen som mottar refusjon og ikke legen som trekket er registrert på. Hvis det trekkes her vil det være kommunen som betaler bidrag/restskatt for legen og det blir jo feil. For alle andre praksistyper kan det foretas trekk.
 valutasort|String| **_NOK_**
 mottakerNavn | String | behandler_navn fra ODB_VEDTAK 
 utenlandsbetaling | Number | 
