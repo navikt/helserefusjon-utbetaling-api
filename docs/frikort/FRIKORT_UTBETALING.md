@@ -1,8 +1,6 @@
 # FRIKORT Utbetaling
 Utbetalingsmelding fra Frikort for nye utbetalinger.
 
-Pt. gjelder denne meldingsbeskrivelse kun for utbetaling til norske kontoer.
-
 ## Ressurser
 _**(Hardkodede konstanter er markert med bold-kursiv)**_
 
@@ -21,19 +19,20 @@ Hver utbetalingslinje holdes igjen i Frikort for å samle opp slik at man ikke l
 Felt | Type | Obligatorisk | Beskrivelse / Verdi
 -----|------|--------------| -------------------
 offisiellId |String | Ja | fødselsnummer
+praksisId | String | Ja | borgerId (en unik id for en borger, uavhengig av fødselsnummer)
 systemId | Number | Ja | _**16**_
 forsystemRef|String| Ja | _**FRIKU **_ + utbetalingsid fra Frikort-utbetaling. _Denne må ikke være lenger enn maks 25 tegn_
 oppdragstype|String| Ja | _**UTBETALING**_
 tjenesteType|String| Ja | Kan være en av følgende: _**NY**_, _**ENDRET**_
 mottakergruppe|String| Ja | _**PRIVATPERSON**_
 valutasort|String| Ja | Kodeverk: ISO-4217. Settes til valutakoden som er knyttet til borgers konto. 
-meldingId | String | Ja | GUID for hver melding. meldingId i [UTBETALINGSOPPDRAG](docs/UTBETALINGSOPPDRAG.md) skal settes til denne verdien Helseutbetaling.
+meldingId | String | Ja | GUID for hver melding. meldingId i [UTBETALINGSOPPDRAG](../UTBETALINGSOPPDRAG.md) skal settes til denne verdien Helseutbetaling.
 mottakerNavn | String | Ja | navn på borger (fra Frikort-borger)
-mottakerAdresse.postnr | String| Nei | Settes til _**0000**_ for alle norske konto. For utenlandsk konto settes den ikke.
-mottakerAdresse.landkode | String | Ja | _**NO**_ dersom kontonummer er norsk, ellers hentes kodenverdien fra TPS for utenlandske adresser (feltet uland). Skal følger ISO-3166-1 alpha-2, mens TPS har ISO 3100-1 alpha-3.
+mottakerAdresse.landkode | String | Nei | _**NO**_ dersom kontonummer er norsk, ellers hentes kodenverdien fra TPS for utenlandske adresser (feltet uland). Skal følger ISO-3166-1 alpha-2, mens TPS har ISO 3100-1 alpha-3.
 mottakerAdresse.adresselinje1 | String | Nei | Hentes fra TPS (uadresse1)
 mottakerAdresse.adresselinje2 | String | Nei | Hentes fra TPS (uadresse2)
 mottakerAdresse.adresselinje3 | String | Nei | Hentes fra TPS (uadresse3)
+utenlandsbetaling | Number | Ja | Indikerer om det er norsk eller utenlands betaling.
 kontonummer | String | Nei | Inneholder norsk bankkontonummer
 iban | String | Nei | For de landene som bruker IBAN
 bban | String | Nei | For de landene som bruker BBAN
@@ -45,7 +44,7 @@ bankAdresse.adresselinje1 | String | Nei | Hentes fra TPS (Adresse-linje1)
 bankAdresse.adresselinje2 | String | Nei | Hentes fra TPS (Adresse-linje2)
 bankAdresse.adresselinje3 | String | Nei | Hentes fra TPS (Adresse-linje3)
 bilagsart | String | Ja | _**TR**_
-forfallsdato | Date| Ja | Dagens dato + 1 dag. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
+forfallsdato | Date| Ja | Dagens dato. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Ja | Sum beløp på alle utbetalingslinjene
 betalingsartkode | String | Nei | Skal fylles ut dersom beløp til utland er større enn 100.000 NOK. _**Hva skal denne være?**_
 melding | String | Ja | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
@@ -68,10 +67,12 @@ Det er satt opp tre eksempelmeldinger for de tre mulig scenarioene.
 
 ## Eksempel norsk utbetaling
 Nedenfor er et eksempel på en ny utbetalingsmelding til en borger som har norsk kontonummer.
+Mottakeradresse settes ikke. Ingen informasjon om utenlandsbetaling blir angitt.
 
 ```
 {
   "offisiellId": "12345612345",
+  "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKU0001",
   "oppdragstype": "UTBETALING",
@@ -80,10 +81,7 @@ Nedenfor er et eksempel på en ny utbetalingsmelding til en borger som har norsk
   "valutasort": "NOK",
   "meldingId": "7a30b579-9318-4e88-adb9-d68c5671c4c3",
   "mottakerNavn": "Finn Dott No",
-  "mottakerAdresse": {
-    "postnr": "0000",
-    "landkode": "NO"
-  },
+  "utenlandsbetaling": 0,
   "kontonummer": "15031769342",
   "bilagsart": "TR",
   "forfallsdato": "2019-03-11T16:34:23.95+01:00",
@@ -127,6 +125,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
 ```
 {
   "offisiellId": "12345612345",
+  "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKUIBANIBANIBAN",
   "oppdragstype": "UTBETALING",
@@ -135,6 +134,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "valutasort": "EUR",
   "meldingId": "a54402e4-002f-4436-8349-149a92e9bb41",
   "mottakerNavn": "Finn Dott No",
+  "utenlandsbetaling": 1,
   "mottakerAdresse": {
     "landkode": "DE",
     "adresselinje1": "Heinzstrasse 11",
@@ -168,6 +168,7 @@ Nedenfor er et eksempel på en ny utbetalingsmelding til en borger som har et BB
 For BBAN så settes følgende felter spesielt:
 * bban
 * banknavn
+* bankkode
 * valutasort
 * mottakerAdresse.landkode
 * mottakerAdresse.adresselinje1
@@ -187,6 +188,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
 ```
 {
   "offisiellId": "12345612345",
+  "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKUBBANBBANBBAN",
   "oppdragstype": "UTBETALING",
@@ -195,6 +197,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "valutasort": "USD",
   "meldingId": "347d3b5b-0f35-4613-aa9b-9aacfa5b9826",
   "mottakerNavn": "Apple",
+  "utenlandsbetaling": 1,
   "mottakerAdresse": {
     "landkode": "US",
     "adresselinje1": "767 5th Ave",
@@ -204,6 +207,7 @@ _Merk at adresselinjene bare blir satt om Frikort (TPS) inneholder adresseinform
   "bban": "USA123456789123",
   "banknavn": "Goldman Sachs",
   "swift": "SWCODE88",
+  "bankkode": "CLEARINGCODE_12",
   "bankAdresse": {
     "landkode": "US",
     "adresselinje1": "200 West St",
