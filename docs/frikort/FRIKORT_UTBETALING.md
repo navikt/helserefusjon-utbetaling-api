@@ -28,21 +28,21 @@ mottakergruppe|String| Ja | _**PRIVATPERSON**_
 valutasort|String| Ja | Kodeverk: ISO-4217. Settes til valutakoden som er knyttet til borgers konto. 
 meldingId | String | Ja | GUID for hver melding. meldingId i [UTBETALINGSOPPDRAG](../UTBETALINGSOPPDRAG.md) skal settes til denne verdien Helseutbetaling.
 mottakerNavn | String | Ja | navn på borger (fra Frikort-borger)
-mottakerAdresse.landkode | String | Nei | _**NO**_ dersom kontonummer er norsk, ellers hentes kodenverdien fra TPS for utenlandske adresser (feltet uland). Skal følger ISO-3166-1 alpha-2, mens TPS har ISO 3100-1 alpha-3.
-mottakerAdresse.adresselinje1 | String | Nei | Hentes fra TPS (uadresse1)
-mottakerAdresse.adresselinje2 | String | Nei | Hentes fra TPS (uadresse2)
-mottakerAdresse.adresselinje3 | String | Nei | Hentes fra TPS (uadresse3)
+mottakerAdresse.landkode | String | Nei | Settes bare for utenlandsbetalinger. Kodeverdien hentes fra TPS for utenlandske adresser (feltet uland). Skal følger ISO-3166-1 alpha-2, mens TPS har ISO 3100-1 alpha-3.
+mottakerAdresse.adresselinje1 | String | Nei | Settes bare for utenlandsbetalinger. Hentes fra TPS (uadresse1)
+mottakerAdresse.adresselinje2 | String | Nei | Settes bare for utenlandsbetalinger. Hentes fra TPS (uadresse2)
+mottakerAdresse.adresselinje3 | String | Nei | Settes bare for utenlandsbetalinger. Hentes fra TPS (uadresse3)
 utenlandsbetaling | Number | Ja | Indikerer om det er norsk eller utenlands betaling.
-kontonummer | String | Nei | Inneholder norsk bankkontonummer
-iban | String | Nei | For de landene som bruker IBAN
-bban | String | Nei | For de landene som bruker BBAN
-swift | String | Nei | Hvis mottaker har et IBAN kontonummer skal denne fylles ut. Ved BBAN kan den fylles ut om man har denne informasjonen.
-bankkode | String | Nei | Bankcode/clearingcode som brukes for noen land
-banknavn | String | Nei | For de landene som bruker BBAN
-bankAdresse.landkode | String | Nei | Settes til _**NO**_ for norsk konto, ellers ISO-3166-1 alpha-2 for utenlandske konto.
-bankAdresse.adresselinje1 | String | Nei | Hentes fra TPS (Adresse-linje1)
-bankAdresse.adresselinje2 | String | Nei | Hentes fra TPS (Adresse-linje2)
-bankAdresse.adresselinje3 | String | Nei | Hentes fra TPS (Adresse-linje3)
+kontonummer | String | Nei | Inneholder norsk bankkontonummer. Settes bare når det er innenlandsbetaling.
+iban | String | Nei | For de landene som bruker IBAN. Settes bare for utenlandsbetalinger. 
+bban | String | Nei | For de landene som bruker BBAN. Settes bare for utenlandsbetalinger. 
+swift | String | Nei | Hvis mottaker har et IBAN kontonummer skal denne fylles ut. Ved BBAN kan den fylles ut om man har denne informasjonen. Settes bare for utenlandsbetalinger. 
+bankkode | String | Nei | Bankcode/clearingcode som brukes for noen land. Settes bare for utenlandsbetalinger. 
+banknavn | String | Nei | For de landene som bruker BBAN. Settes bare for utenlandsbetalinger. 
+bankAdresse.landkode | String | Nei | Settes til _**NO**_ for norsk konto, ellers ISO-3166-1 alpha-2 for utenlandske konto. Settes bare for utenlandsbetalinger. 
+bankAdresse.adresselinje1 | String | Nei | Hentes fra TPS (Adresse-linje1). Settes bare for utenlandsbetalinger. 
+bankAdresse.adresselinje2 | String | Nei | Hentes fra TPS (Adresse-linje2). Settes bare for utenlandsbetalinger. 
+bankAdresse.adresselinje3 | String | Nei | Hentes fra TPS (Adresse-linje3). Settes bare for utenlandsbetalinger.
 bilagsart | String | Ja | _**TR**_
 forfallsdato | Date| Ja | Dagens dato. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Ja | Sum beløp på alle utbetalingslinjene
