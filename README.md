@@ -14,6 +14,7 @@ Meldinger |  Beskrivelse
 [Ordre_meldingsdefinisjon](docs/Ordre_meldingsdefinisjon.md) | Ordremelding
 [Utbetaling_meldingsdefinisjon](docs/Utbetaling_meldingsdefinisjon.md) | Utbetalingsmelding
 [UtbetalingEndret_meldingsdefinisjon](docs/UtbetalingEndret_meldingsdefinisjon.md) | Endringsmelding
+[Avstemming_meldingsdefinsjon](docs/Avstemming_meldingsdefinisjon.md) | Avstemming
 
 (Arbeidskatalog for meldingsendringer: [docs/under_arbeid](docs/under_arbeid))
 

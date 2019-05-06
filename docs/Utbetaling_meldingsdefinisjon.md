@@ -1,6 +1,6 @@
 # Utbetaling meldingsdefinisjon
 
-Felles meldingsdefinisjon for ubetbalingsmeldinger. Skal innholde alle feltene som kan komme fra eresept og kuhr.
+Felles meldingsdefinisjon for utbetbalingsmeldinger. Skal innholde alle feltene som kan komme fra eresept og kuhr.
 
 Beskrivelse av hvordan meldingen brukes av hvert system ligger i egen katalog for hvert system.
 
