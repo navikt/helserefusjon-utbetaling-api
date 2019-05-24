@@ -46,7 +46,6 @@ bankAdresse.adresselinje3 | String | Nei | Hentes fra TPS (Adresse-linje3). Sett
 bilagsart | String | Ja | _**TR**_
 forfallsdato | Date| Ja | Dagens dato. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
 belop | Number | Ja | Sum beløp på alle utbetalingslinjene
-betalingsartkode | String | Nei | Skal fylles ut dersom beløp til utland er større enn 100.000 NOK. _**Hva skal denne være?**_
 melding | String | Ja | Teksten "Refusjon egenandel(er) frikort 2018" (År blir generert dynamisk).
 konteringer | Array:Konteringslinje ||
 
@@ -86,7 +85,6 @@ Mottakeradresse settes ikke. Ingen informasjon om utenlandsbetaling blir angitt.
   "bilagsart": "TR",
   "forfallsdato": "2019-03-11T16:34:23.95+01:00",
   "belop": 40,
-  "betalingsartkode": "?????? <hva skal denne være > ?????",
   "konteringer": [
     {
       "linjeNr": 0,
