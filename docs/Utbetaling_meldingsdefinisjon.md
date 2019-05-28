@@ -16,16 +16,23 @@ tjenesteType|String| Ja | Fast verdi: NY
 mottakergruppe|String| Ja | Privatperson/behandler/virksomhet
 valutasort|String| Ja | 
 meldingId | String | Ja | GUID 
-navn | String | Ja | 
-postnr | String| Ja | 
-landkode | String | Ja |
-kontonummer | String | Ja | 
+mottakerNavn | String | Ja | 
+mottakeradresse | Adresse | Nei | 
+kontonummer | String | Nei | 
+utenlandsbetaling | Number | Ja | 
+banknavn | String | Nei | 
+bankadresse | Adresse | Nei | 
+iban | String | Nei |
+bban | String | Nei | 
+swift | String | Nei | 
+bankkode | String | Nei | 
 bilagsart | String | Ja | Fast verdi: TR 
 forfallsdato | Date| Ja | 
 belop | Number | Ja | 
 kidnummer | String | Nei | 
 eksternReferanse | String | Nei |
 melding | String | Nei |
+trekkpliktig | Number | Nei | Brukes av Kuhr
 konteringer | Array:Konteringslinje |
 
 ### Konteringslinje
@@ -38,3 +45,13 @@ belop | Number | Ja |
 fraDato | Date | Nei |
 tilDato | Date | Nei |
 koststed | String | Nei | 
+
+### Adresse 
+Felt | Type | Påkrevet | Beskrivelse 
+-----|----- |----- |--------------------
+postnr | String | Nei | 
+poststed | String | Nei | 
+landkode | String | Nei | 
+adresselinje1 | String | Nei |
+adresselinje2 | String | Nei |
+adresselinje3 | String | Nei |

@@ -14,10 +14,8 @@ oppdragstype | String| Ja | Fast verdi: ORDRE
 tjenesteType | String | Ja | Fast verdi: NY
 mottakergruppe | String | Ja | Privatperson/Behandler/Virksomhet
 valutasort | String | Ja | 
-navnKontakt | String | Ja |
-adresseKontakt | String | Ja | 
-postnrKontakt | String | Nei |
-poststedKontakt | String | Nei |
+mottakernavn | String | Ja | 
+mottakeradresse | Adresse | Ja | 
 ordreType | String | Ja | FH/FR/FF
 meldingFaktura | String | Ja
 fakturaType | String | Ja | H-resept/Rabatt legemidler/Fritt behandlingsvalg
@@ -44,3 +42,13 @@ Felt | Type | Påkrevet | Beskrivelse
 -----|------|----------| --------------------
 tekstlinjenummer | Number | Ja | 
 tekstlinjetekst | String | Ja | kolonnenavn;verdi
+
+### Adresse 
+Felt | Type | Påkrevet | Beskrivelse 
+-----|----- |----- |--------------------
+adresselinje1 | String | Ja |
+adresselinje2 | String | Nei |
+adresselinje3 | String | Nei |
+landkode | String | Ja | 
+postnr | String | Nei | 
+poststed | String | Nei | 
