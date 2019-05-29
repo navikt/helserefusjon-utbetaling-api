@@ -14,8 +14,10 @@ oppdragstype| String | Ja | _**UTBETALING**_
 tjenesteType| String | Ja | _**ENDRET**_
 mottakergruppe| String | Ja |
 kontonummer | String | Nei
+mottakerNavn | String | Nei| Nytt felt
+mottakerAdresse | Adresse | Nei | Nytt felt
 banknavn | String | Nei | Nytt felt
-bankadresse | Adresse | Nei | Nytt felt
+bankAdresse | Adresse | Nei | Nytt felt
 iban | String | Nei | Nytt felt
 bban | String | Nei | Nytt felt
 swift | String | Nei | Nytt felt
@@ -76,11 +78,12 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "iban": "DE123456789123",
   "swift": "SWCODE99",
   "bilagsart": "TR",
-  "bankadresse": {
-    "landkode": "DE",
-    "adresselinje1": "Heinzstrasse 11",
-    "adresselinje2": "87789 Düsseldorf",
-    "adresselinje3": "GERMANY"
+  "mottakerNavn": "Finn Dott No",
+  "mottakerAdresse": {
+      "landkode": "DE",
+      "adresselinje1": "Heinzstrasse 11",
+      "adresselinje2": "87789 Düsseldorf",
+      "adresselinje3": "GERMANY"
     }
 }
 ```
@@ -103,12 +106,19 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "utenlandsbetaling": 1,
   "endretKontakt": 1,
   "endretKid": 0,
+  "mottakerNavn": "Apple",
+  "mottakerAdresse": {
+      "landkode": "US",
+      "adresselinje1": "767 5th Ave",
+      "adresselinje2": "NY 10153",
+      "adresselinje3": "USA"
+    },
   "bban": "USA123456789123",
   "banknavn": "Goldman Sachs",
   "swift": "SWCODE88",
   "bankkode": "CLEARINGCODE_12",
   "bilagsart": "TR",
-  "bankadresse": {
+  "bankAdresse": {
      "landkode": "US",
      "adresselinje1": "200 West St",
      "adresselinje2": "NY 10282",
