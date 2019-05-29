@@ -1,6 +1,6 @@
 # FRIKORT Endret Utbetaling
 
-meldingsdefinisjon for utbetaling-endret meldinger for Frikort.
+Meldingsdefinisjon for utbetaling-endret meldinger for Frikort.
 
 ### Utbetaling-endret
 Felt | Type | Påkrevet | Beskrivelse 
@@ -25,7 +25,6 @@ bankkode | String | Nei | Nytt felt
 bilagId | Number | Nei |
 endretKontakt | Number | Ja |  Nytt felt
 endretKid  | Number | Ja |  Alltid false
-valutasort | String | Ja  | _Skal denne være med ???_
 
 ### Adresse
 Felt | Type | Påkrevet | Beskrivelse 
@@ -48,7 +47,6 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har n
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
-  "valutasort": "NOK",
   "meldingId": "7a30b579-9318-4e88-adb9-d68c5671c4c3",
   "mottakerNavn": "Finn Dott No",
   "utenlandsbetaling": 0,
@@ -70,7 +68,6 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
-  "valutasort": "EUR",
   "meldingId": "a54402e4-002f-4436-8349-149a92e9bb41",
   "utenlandsbetaling": 1,
   "endretKontakt": 1,
@@ -101,7 +98,6 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
-  "valutasort": "USD",
   "meldingId": "347d3b5b-0f35-4613-aa9b-9aacfa5b9826",
   "utenlandsbetaling": 1,
   "endretKontakt": 1,
