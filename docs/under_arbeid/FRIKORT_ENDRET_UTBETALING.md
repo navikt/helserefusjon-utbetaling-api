@@ -10,7 +10,7 @@ offisiellId | String | Ja |
 praksisId | String | Ja | (Frikort setter borgerId)
 systemId | Number | Ja | 
 forsystemRef| String | Ja | Skal denne være med?
-oppdragstype| String | Ja | _**UTBETALING**_
+oppdragstype| String | Ja | _**ENDRET_UTBETALING**_
 tjenesteType| String | Ja | _**ENDRET**_
 mottakergruppe| String | Ja |
 kontonummer | String | Nei
@@ -43,7 +43,7 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har n
   "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKU0001",
-  "oppdragstype": "UTBETALING",
+  "oppdragstype": "ENDRET_UTBETALING",
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
@@ -64,7 +64,7 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKU0002",
-  "oppdragstype": "UTBETALING",
+  "oppdragstype": "ENDRET_UTBETALING",
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
@@ -94,7 +94,7 @@ Nedenfor er et eksempel på en endret utbetalingsmelding til en borger som har e
   "praksisId": 3333434,
   "systemId": 16,
   "forsystemRef": "FRIKU0002",
-  "oppdragstype": "UTBETALING",
+  "oppdragstype": "ENDRET_UTBETALING",
   "tjenesteType": "ENDRET",
   "mottagergruppe": "PRIVATPERSON",
   "kontonummer": "15031769342",
