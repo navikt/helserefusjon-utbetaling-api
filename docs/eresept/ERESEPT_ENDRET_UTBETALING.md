@@ -8,7 +8,7 @@ Felt | Type | Beskrivelse / Verdi
 forsystemRef|String| _**U**_ + vedtak_id fra VEDTAK
 meldingId | String | GUID for hver melding
 systemId | Number | _**14**_ = ERESEPT
-oppdragstype|String| _**UTBETALING**_
+oppdragstype|String| _**ENDRET_UTBETALING**_
 mottakergruppe|String| _**VIRKSOMHET**_
 tjenesteType|String| _**ENDRET**_
 offisiellId |String | orgnr fra SAR 

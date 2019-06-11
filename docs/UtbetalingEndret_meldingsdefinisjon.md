@@ -11,7 +11,7 @@ offisiellId |String | Ja |
 praksisId | String | Ja | (Frikort setter borgerId)
 systemId | Number | Ja |
 forsystemRef|String| Ja |
-oppdragstype|String| Ja |  Fast verdi: UTBETALING
+oppdragstype|String| Ja |  Fast verdi: ENDRET_UTBETALING
 tjenesteType|String| Ja | Fast verdi: ENDRET
 mottakergruppe|String| Ja |
 kontonummer | String | Nei
