@@ -9,7 +9,7 @@ meldingId | String | Ja |
 offisiellId | String | Ja |
 praksisId | String | Ja | (Frikort setter borgerId)
 systemId | Number | Ja | 
-forsystemRef| String | Ja | Skal denne være med?
+forsystemRef| String | Ja | Samme som opprinnelig utbetalingsmelding
 oppdragstype| String | Ja | _**ENDRET_UTBETALING**_
 tjenesteType| String | Ja | _**ENDRET**_
 mottakergruppe| String | Ja |
