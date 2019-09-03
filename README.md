@@ -37,4 +37,4 @@ Meldinger |  Beskrivelse
 Meldinger |  Beskrivelse
 -----|------------
 [FRIKORT_UTBETALING](docs/frikort/FRIKORT_UTBETALING.md) | Utbetaling fra Frikort
-[FRIKORT_UTBETALING](docs/frikort/FRIKORT_ENDRET_UTBETALING.md) | Endret utbetaling fra Frikort
+[FRIKORT_ENDRET_UTBETALING](docs/frikort/FRIKORT_ENDRET_UTBETALING.md) | Endret utbetaling fra Frikort
