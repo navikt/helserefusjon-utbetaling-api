@@ -55,4 +55,37 @@ belop | Number | _**Beløp med motsatt fortegn av den opprinnelige utbetalingen.
  
  
 # Eksempler på utfylling av utlikningsmelding
-_**TODO**_
+_**TODO Eksempelmeldingen er ikke ferdig ennå**_
+
+```
+{
+  "offisiellId": "12345612345",
+  "praksisId": 3333434,
+  "systemId": 16,
+  "forsystemRef": "FRIKU0001",
+  "oppdragstype": "UTBETALING",
+  "tjenesteType": "NY",
+  "mottakergruppe": "PRIVATPERSON",
+  "valutasort": "NOK",
+  "meldingId": "7a30b579-9318-4e88-adb9-d68c5671c4c3",
+  "mottakerNavn": "Finn Dott No",
+  "utenlandsbetaling": 0,
+  "bilagsart": "TR",
+  "forfallsdato": "2019-03-11T16:34:23.95+01:00",
+  "belop": 40,
+  "konteringer": [
+    {
+      "linjeNr": 0,
+      "artskonto": "874",
+      "kapPost": "275270",
+      "belop": 20
+    },
+    {
+      "linjeNr": 1,
+      "artskonto": "874",
+      "kapPost": "275270",
+      "belop": 20
+    }
+  ]
+}
+```
