@@ -37,7 +37,7 @@ mottakergruppe|String| Ja | _**PRIVATPERSON**_
 valutasort|String| Ja | Kodeverk: ISO-4217. Settes til valutakoden som er knyttet til borgers konto. 
 meldingId | String | Ja | CorrelationId for den nye utlikningsmeldingen.
 mottakerNavn | String | Ja | navn på borger (fra Frikort-borger)
-mottakerAdresse.landkode | String | Nei | Settes bare for utenlandsbetalinger. Kodeverdien hentes fra TPS for utenlandske adresser (feltet uland). Skal følger ISO-3166-1 alpha-2, mens TPS har ISO 3100-1 alpha-3.
+mottakerAdresse.landkode | String | Ja | _**KAN DENNE UTGÅ?????.**_
 utenlandsbetaling | Number | Ja | Indikerer om det er norsk eller utenlands betaling.
 bilagnummer | String | Ja | _**Bilagsnummeret til utbetalingen man skal utligne. Nytt felt**_.
 bilagsart | String | Ja | _**Skal være: UF - for utlingning på grunn av feil. UA - for avskrivning av utbetalinger som er mer enn tre år gamle. De nye bilagsartene må etableres i UBW.**_
