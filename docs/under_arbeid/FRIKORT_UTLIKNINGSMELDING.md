@@ -6,28 +6,41 @@ _**(Hardkodede konstanter er markert med bold-kursiv)**_
 
 ## Teknisk beskrivelse
 En utligningsmelding skal utligne en tidligere innsende utbetalingsmelding. Beløpene vil være de samme beløpene som i opprinnelig utbetalingsmelding bare med negativt fortegn.
-Utligningsmeldingen til også referere til bilagsnr
+Utligningsmeldingen refererer også til bilagId fra mottatt kvittering.
 
 ### Utligningsmelding
 Felt | Type | Obligatorisk | Beskrivelse / Verdi
 -----|------|--------------| -------------------
-offisiellId |String | Ja | fødselsnummer
-praksisId | String | Ja | borgerId (en unik id for en borger, uavhengig av fødselsnummer)
+offisiellId |String | Ja | Samme som opprinnelig utbetaling
+praksisId | String | Ja | Samme som opprinnelig utbetaling
 systemId | Number | Ja | _**16**_
-forsystemRef|String| Ja | **"FRIKU"** + id fra den opprinnelige utbetalingen + **"-UTL"**. Eks. **FRIKU94949-UTL**. 
-oppdragstype|String| Ja | _Burde denne være noe annet enn _**UTBETALING**_? F.eks. UTLIGNING?_
-tjenesteType|String| Ja | _**Hva skal denne være dersom det har vært en endringsmelding sendt? Skal den fremdeles være NY**_. En mulighet er f.eks. en ny verdi, f.eks. UTLIGNING?
-mottakergruppe|String| Ja | _**PRIVATPERSON**_
-valutasort|String| Ja | Kodeverk: ISO-4217. Settes til valutakoden som er knyttet til borgers konto. 
-meldingId | String | Ja | CorrelationId for den nye utlikningsmeldingen.
-mottakerNavn | String | Ja | navn på borger (fra Frikort-borger)
-mottakerAdresse.landkode | String | Ja | _**KAN DENNE UTGÅ?????.**_
-utenlandsbetaling | Number | Ja | _**KAN DENNE UTGÅ?????.**_
-bilagId (merk annet navn enn bilagsnummer) | String | Ja | _**Bilagsnummeret til utbetalingen man skal utligne. Nytt felt**_. MERK! I meldingsbeskrivelse fra Hdir er det kalt bilagsnummer, men i kvitteringen heter det bilagsnummer.
-bilagsart | String | Ja | _**Skal være: UF - for utlingning på grunn av feil. UA - for avskrivning av utbetalinger som er mer enn tre år gamle. De nye bilagsartene må etableres i UBW.**_
-forfallsdato | Date| Ja | Dagens dato. Format er ISO8601: ``yyyy-MM-ddTHH:mm:ss.SSSZ``. _Todo: Avklare omkring neste virkedag._ 
-belop | Number | Ja | _**Beløp med motsatt fortegn av beløpet på den opprinnelige utbetalingen.**_
-konteringer | Array:Konteringslinje ||
+forsystemRef|String| Ja | **"FRIKU"** + id fra den opprinnelige utbetalingen + **"-UTL"**. Eks. **FRIKU94949-UTL**.
+oppdragstype|String| Ja | Vil alltid være **UTBETALING**
+tjenesteType|String| Ja | Vil alltid være **NY**
+mottakergruppe|String| Ja | Samme som opprinnelig utbetaling
+valutasort|String| Ja | Samme som opprinnelig utbetaling 
+meldingId | String | Ja | GUID for hver melding. 
+mottakerNavn | String | Ja | Samme som opprinnelig utbetaling
+mottakerAdresse.landkode | String | Nei | Samme som opprinnelig utbetaling
+mottakerAdresse.adresselinje1 | String | Nei | Samme som opprinnelig utbetaling
+mottakerAdresse.adresselinje2 | String | Nei | Samme som opprinnelig utbetaling
+mottakerAdresse.adresselinje3 | String | Nei | Samme som opprinnelig utbetaling
+utenlandsbetaling | Number | Ja | Samme som opprinnelig utbetaling
+bilagId | String | Ja | _**Nytt felt. Bilagsnummeret til utbetalingen man skal utligne. Hentes fra kvittering mottatt fra Hdir.**_. 
+kontonummer | String | Nei | Samme som opprinnelig utbetaling
+iban | String | Nei | Samme som opprinnelig utbetaling 
+bban | String | Nei | Samme som opprinnelig utbetaling 
+swift | String | Nei | Samme som opprinnelig utbetaling 
+bankkode | String | Nei | Samme som opprinnelig utbetaling 
+banknavn | String | Nei | Samme som opprinnelig utbetaling 
+bankAdresse.landkode | String | Nei | Samme som opprinnelig utbetaling 
+bankAdresse.adresselinje1 | String | Nei | Samme som opprinnelig utbetaling 
+bankAdresse.adresselinje2 | String | Nei | Samme som opprinnelig utbetaling 
+bankAdresse.adresselinje3 | String | Nei | Samme som opprinnelig utbetaling
+bilagsart | String | Ja | _**Skal være: UF - for utlingning på grunn av feil. UA - for avskrivning av utbetalinger som er mer enn tre år gamle.**_
+forfallsdato | Date| Ja | Samme som opprinnelig utbetaling 
+belop | Number | Ja | _**Samme som opprinnelig utbetaling men med negativt fortegn**_
+melding | String | Ja | Samme som opprinnelig utbetaling
 
 ### Konteringslinje
 Felt | Type | Beskrivelse / Verdi
@@ -35,38 +48,5 @@ Felt | Type | Beskrivelse / Verdi
 linjenr | Number | Samme som opprinngelig utbetaling.
 artskonto | String | Samme som opprinngelig utbetaling. 
 kapPost | String | Samme som opprinngelig utbetaling.
-belop | Number | _**Beløp med motsatt fortegn av den opprinnelige utbetalingen.**_
+belop | Number | _**Samme som opprinnelig utbetaling men med negativt fortegn**_
  
- 
-# Eksempler på utfylling av utlikningsmelding
-```
-{
-  "offisiellId": "12345612345",
-  "praksisId": 3333434,
-  "systemId": 16,
-  "forsystemRef": "FRIKU89891-UTL",
-  "oppdragstype": "XXXXX",
-  "tjenesteType": "XXXXX",
-  "mottakergruppe": "PRIVATPERSON",
-  "valutasort": "NOK",
-  "meldingId": "7a30b579-9318-4e88-adb9-d68c5671c4c3",
-  "mottakerNavn": "Finn Dott No",
-  "bilagsart": "TR",
-  "forfallsdato": "2019-03-11T16:34:23.95+01:00",
-  "belop": -40,
-  "konteringer": [
-    {
-      "linjeNr": 0,
-      "artskonto": "874",
-      "kapPost": "275270",
-      "belop": -20
-    },
-    {
-      "linjeNr": 1,
-      "artskonto": "874",
-      "kapPost": "275270",
-      "belop": -20
-    }
-  ]
-}
-```
