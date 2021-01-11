@@ -17,7 +17,7 @@ egenReferanse|String| FAKTURA_C_VAKSINE_ID fra ODB_FAKTURA_C_VAKSINE
 fakturaReferanse|String| deres_referanse fra ODB_KOMMUNE_FAKTURERING
 fakturaType|String| **_Covid19-vaksinering_**
 meldingFaktura|String| **_Refusjon for covid19-vaksinering hos fastlege. Periode <dato fra>-<dato og år til>._**
-ordreType|String| | Er FF og FH for de andre fakturaene
+ordreType|String| FV | 
 mottakerNavn|String| Navn fra ODB_KOMMUNE_FAKTURERING
 mottakerAdresse| Mottakeradresse |
 belop|Number| Sum av beløpet på takster som inngår i fakturaen 
@@ -57,17 +57,18 @@ tekstlinjetekst|String|
 tekstlinjenummer|tekstlinjetekst-prefix| Format | Beskrivelse
 -----|------|---------|------------------
 1|Orgnr| | Legens org.nr. hentet fra avsender_orgnr. Kan være blank.
-2|Legensnavn| | Fornavn og etternavn
-3|Legekontor| |  avsender_cn
-4|Utbetalt refusjon| | 
-5|Antall takst 61a | | 
-6|Refusjon takst 61a| | 
-7|Antall takst 61b| | 
-8|Refusjon takst 61b| | 
-9|Antall takst 62| 
-10|Refusjon takst 62| | 
-11|Antall takst 63| |
-11|Refusjon takst 63| |  
+2|HPRnr| | Legens HPRnr
+3|Legensnavn| | Fornavn og etternavn
+4|Legekontor| |  avsender_cn
+5|Utbetalt refusjon| | 
+6|Antall takst 61a | | 
+7|Refusjon takst 61a| | 
+8|Antall takst 61b| | 
+9|Refusjon takst 61b| | 
+10|Antall takst 62| 
+11|Refusjon takst 62| | 
+12|Antall takst 63| |
+13|Refusjon takst 63| |  
 
 
 ## Eksempel
