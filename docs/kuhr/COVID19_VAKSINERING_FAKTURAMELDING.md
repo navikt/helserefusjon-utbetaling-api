@@ -16,7 +16,7 @@ valutasort|String| **_NOK_**
 egenReferanse|String| FAKTURA_C_VAKSINE_ID fra ODB_FAKTURA_C_VAKSINE
 fakturaReferanse|String| deres_referanse fra ODB_KOMMUNE_FAKTURERING
 fakturaType|String| **_Covid19-vaksinering_**
-meldingFaktura|String| **_Refusjon for covid19-vaksinering hos fastlege. Periode <dato fra>-<dato og år til>._**
+meldingFaktura|String| **_Refusjon for covid19-vaksinering hos fastlege. Månedsfaktura <år>-<måned>._**
 ordreType|String| FV | 
 mottakerNavn|String| Navn fra ODB_KOMMUNE_FAKTURERING
 mottakerAdresse| Mottakeradresse |
@@ -42,9 +42,9 @@ linjenummer|Number|
 belop|Number| Sum av beløpet på takstene for legen i praksisen
 artskonto|String| | Trenger verdi
 kapittelPost|String| | Trenger verdi
-utleveringsdato|Date| | Sette til den første i måneden?
-artikkelnummer|String| | Er hardkodet FBV for FBV
-antallEnheter|Number| | Er hardkodet 100 for FBV
+utleveringsdato|Date| | 
+artikkelnummer|String| V| 
+antallEnheter|Number| 100| 
 tekstlinje|Array:Tekstlinje| En linje per ekstra felt som skal med| 
      
 ### Tekstlinje 
@@ -74,6 +74,156 @@ tekstlinjenummer|tekstlinjetekst-prefix| Format | Beskrivelse
 ## Eksempel
 
 ```json
+{
+  "meldingId": "7006aace-4059-47cb-990c-e51eb3967eed",
+  "offisiellId": "99998888",
+  "systemId": 15,
+  "forsystemRef": "F1",
+  "oppdragstype": "ORDRE",
+  "tjenesteType": "ny",
+  "mottakergruppe": "Virksomhet",
+  "valutasort": "NOK",
+  "egenReferanse": "1",
+  "fakturaReferanse": "OSL-VAK-1-FAK",
+  "fakturaType": "Covid19-vaksinering",
+  "meldingFaktura": "Refusjon for covid19-vaksinering hos fastlege. Månedsfaktura 2021-01.",
+  "ordreType": "FV",
+  "mottakerNavn": "Oslo",
+  "mottakerAdresse": {
+    "adresselinje1": "Rådhuset 1",
+    "postnr": "0170",
+    "poststed": "Oslo",
+    "landkode": "NO"
+  },
+  "belop": 30000.0,
+  "betalingsfrist": 20,
+  "artikkellinjer": [
+    {
+      "linjenummer": 1,
+      "belop": 15000.0,
+      "artskonto": "827",
+      "kapittelPost": "074072",
+      "artikkelnummer": "V",
+      "antallEnheter": 100,
+      "tekstlinje": [
+        {
+          "tekstlinjenummer": 1,
+          "tekstlinjetekst": "Orgnr;88889999"
+        },
+        {
+          "tekstlinjenummer": 2,
+          "tekstlinjetekst": "HPRnr;99998888"
+        },
+        {
+          "tekstlinjenummer": 3,
+          "tekstlinjetekst": "Legensnavn;Test Person"
+        },
+        {
+          "tekstlinjenummer": 4,
+          "tekstlinjetekst": "Legekontor;Legekontor"
+        },
+        {
+          "tekstlinjenummer": 5,
+          "tekstlinjetekst": "Utbetalt refusjon;15000.0"
+        },
+        {
+          "tekstlinjenummer": 6,
+          "tekstlinjetekst": "Antall takst 61a;3"
+        },
+        {
+          "tekstlinjenummer": 7,
+          "tekstlinjetekst": "Refusjon takst 61a;660.0"
+        },
+        {
+          "tekstlinjenummer": 8,
+          "tekstlinjetekst": "Antall takst 61b;3"
+        },
+        {
+          "tekstlinjenummer": 9,
+          "tekstlinjetekst": "Refusjon takst 61b;660.0"
+        },
+        {
+          "tekstlinjenummer": 10,
+          "tekstlinjetekst": "Antall takst 62;1"
+        },
+        {
+          "tekstlinjenummer": 11,
+          "tekstlinjetekst": "Refusjon takst 62;6840.0"
+        },
+        {
+          "tekstlinjenummer": 10,
+          "tekstlinjetekst": "Antall takst 63;1"
+        },
+        {
+          "tekstlinjenummer": 11,
+          "tekstlinjetekst": "Refusjon takst 63;6840.0"
+        }
+      ]
+    },
+    {
+      "linjenummer": 2,
+      "belop": 15000.0,
+      "artskonto": "827",
+      "kapittelPost": "074072",
+      "artikkelnummer": "V",
+      "antallEnheter": 100,
+      "tekstlinje": [
+        {
+          "tekstlinjenummer": 1,
+          "tekstlinjetekst": "Orgnr;88889999"
+        },
+        {
+          "tekstlinjenummer": 2,
+          "tekstlinjetekst": "HPRnr;99998888"
+        },
+        {
+          "tekstlinjenummer": 3,
+          "tekstlinjetekst": "Legensnavn;Test Perso2n"
+        },
+        {
+          "tekstlinjenummer": 4,
+          "tekstlinjetekst": "Legekontor;Legekontor2"
+        },
+        {
+          "tekstlinjenummer": 5,
+          "tekstlinjetekst": "Utbetalt refusjon;15000.0"
+        },
+        {
+          "tekstlinjenummer": 6,
+          "tekstlinjetekst": "Antall takst 61a;3"
+        },
+        {
+          "tekstlinjenummer": 7,
+          "tekstlinjetekst": "Refusjon takst 61a;660.0"
+        },
+        {
+          "tekstlinjenummer": 8,
+          "tekstlinjetekst": "Antall takst 61b;3"
+        },
+        {
+          "tekstlinjenummer": 9,
+          "tekstlinjetekst": "Refusjon takst 61b;660.0"
+        },
+        {
+          "tekstlinjenummer": 10,
+          "tekstlinjetekst": "Antall takst 62;1"
+        },
+        {
+          "tekstlinjenummer": 11,
+          "tekstlinjetekst": "Refusjon takst 62;6840.0"
+        },
+        {
+          "tekstlinjenummer": 10,
+          "tekstlinjetekst": "Antall takst 63;1"
+        },
+        {
+          "tekstlinjenummer": 11,
+          "tekstlinjetekst": "Refusjon takst 63;6840.0"
+        }
+      ]
+    }
+  ]
+}
 
 ```
 
