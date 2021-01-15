@@ -3,8 +3,8 @@
 ## Ressurser
 **_(Hardkodede konstanter er markert med bold-kursiv)_**
 ### Faktura
-Felt | Type | Beskrivelse / Verdi | Avklart
------|------ |------------|-----
+Felt | Type | Beskrivelse / Verdi
+-----|------ |------------
 meldingId | String | GUID for hver melding, brukes for å oppdage duplikater og spore en melding gjennom en kjede av systemer.
 offisiellId |String | Orgnr. fra ODB_KOMMUNE_FAKTURERING 
 systemId | Number | _**15**_ = KUHR
@@ -14,14 +14,14 @@ tjenesteType|String| _**ny**_
 mottakergruppe|String| **_Virksomhet_**
 valutasort|String| **_NOK_**
 egenReferanse|String| FAKTURA_C_VAKSINE_ID fra ODB_FAKTURA_C_VAKSINE
-fakturaReferanse|String| deres_referanse fra ODB_KOMMUNE_FAKTURERING
+fakturaReferanse|String| **_Covid19-vaksinering <år>-<måned>_**
 fakturaType|String| **_Covid19-vaksinering_**
 meldingFaktura|String| **_Refusjon for covid19-vaksinering hos fastlege. Månedsfaktura <år>-<måned>._**
 ordreType|String| FV | 
 mottakerNavn|String| Navn fra ODB_KOMMUNE_FAKTURERING
 mottakerAdresse| Mottakeradresse |
 belop|Number| Sum av beløpet på takster som inngår i fakturaen 
-betalingsfrist|Number| _**20**_ | ?
+betalingsfrist|Number| _**20**_ 
 artikkellinjer|Array:Artikkellinje|
 
 ### Mottakeradresse
@@ -36,16 +36,16 @@ landkode|String| **_NO_**
 ### Artikkellinje 
 Det lages 1 artikkellinje per lege i en praksis som har vaksinert pasienter fra kommunen den måneden. 
 
-Felt | Type | Beskrivelse | Avklart
------|------ |------------|------
+Felt | Type | Beskrivelse 
+-----|------ |------------
 linjenummer|Number|
 belop|Number| Sum av beløpet på takstene for legen i praksisen
-artskonto|String| | Trenger verdi
-kapittelPost|String| | Trenger verdi
-utleveringsdato|Date| | 
-artikkelnummer|String| V| 
-antallEnheter|Number| 100| 
-tekstlinje|Array:Tekstlinje| En linje per ekstra felt som skal med| 
+artskonto|String| **8301** 
+kapittelPost|String| **374006** 
+utleveringsdato|Date| 
+artikkelnummer|String| V 
+antallEnheter|Number| 100 
+tekstlinje|Array:Tekstlinje| En linje per ekstra felt som skal med 
      
 ### Tekstlinje 
 Felt | Type | Beskrivelse
