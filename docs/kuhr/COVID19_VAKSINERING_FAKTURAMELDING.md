@@ -101,8 +101,8 @@ tekstlinjenummer|tekstlinjetekst-prefix| Format | Beskrivelse
     {
       "linjenummer": 1,
       "belop": 15000.0,
-      "artskonto": "827",
-      "kapittelPost": "074072",
+      "artskonto": "8301",
+      "kapittelPost": "374006",
       "artikkelnummer": "V",
       "antallEnheter": 100,
       "tekstlinje": [
