@@ -19,7 +19,7 @@ fakturaType|String| **_Covid19-vaksinering_**
 meldingFaktura|String| **_Refusjon for covid19-vaksinering hos fastlege. Månedsfaktura <år>-<måned>._**
 ordreType|String| FV | 
 mottakerNavn|String| Navn fra ODB_KOMMUNE_FAKTURERING
-mottakerAdresse| Mottakeradresse |
+mottakerAdresse| Mottakeradresse | Adresse fra ODB_KOMMUNE_FAKTURERING
 belop|Number| Sum av beløpet på takster som inngår i fakturaen 
 betalingsfrist|Number| _**20**_ 
 artikkellinjer|Array:Artikkellinje|
@@ -42,7 +42,7 @@ linjenummer|Number|
 belop|Number| Sum av beløpet på takstene for legen i praksisen
 artskonto|String| **8301** 
 kapittelPost|String| **374006** 
-utleveringsdato|Date| 
+utleveringsdato|Date| Settes til første i måneden fakturaen gjelder
 artikkelnummer|String| V 
 antallEnheter|Number| 100 
 tekstlinje|Array:Tekstlinje| En linje per ekstra felt som skal med 
