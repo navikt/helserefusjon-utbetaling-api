@@ -6,7 +6,8 @@
 Felt | Type | Beskrivelse / Verdi
 -----|------ |------------
 meldingId | String | GUID for hver melding, brukes for å oppdage duplikater og spore en melding gjennom en kjede av systemer.
-offisiellId |String | Orgnr. fra ODB_KOMMUNE_FAKTURERING 
+offisiellId |String | Skal ikke være satt, id er ubwId
+ubwId |String | Hentes fra ODB_KOMMUNE_FAKTURERING.kundenr
 systemId | Number | _**15**_ = KUHR
 forsystemRef|String| FAKTURA_C_VAKSINE_ID fra ODB_FAKTURA_C_VAKSINE
 oppdragstype|String| **_ORDRE_**
